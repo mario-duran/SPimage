@@ -2,12 +2,12 @@
 CKEditor plugin to add images from a SharePoint 2013 asset library (Asset Picker).
 
 # Language
-Javascript
+JavaScript
 
 # Dependencies
 CKEditor 4.6 <br>
-jQuery 1.12 or greater
-SharePoint 2013
+jQuery 1.12 or greater <br>
+SharePoint 2013 <br>
 
 # Usage:
 
