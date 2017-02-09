@@ -12,7 +12,7 @@ function(editor){
           {
             type:'text',
             id:'imgSrc',
-            label:'Image Source',
+            label:'Image Source: *',
             validate:CKEDITOR.dialog.validate.notEmpty('Image Source field cannot be empty')
         },
         {
@@ -20,6 +20,7 @@ function(editor){
           id:'brsButton',
           label:'Browse',
           title:'Browse',
+          style: 'float:right',
           onClick: function() {
               var thisDialog = CKEDITOR.dialog.getCurrent(); //get the current instance of the dialog
 
@@ -47,25 +48,10 @@ function(editor){
           },
           {
             type: 'text',
-            id: 'imgHeight',
-            label: 'Height',
-            maxLength: 5,
-            size: 50,
-            validate: function() {
-              if (this.getValue()) {
-                if(isNaN(parseFloat(this.getValue()))) {
-                  alert('Height must be numeric.' );
-                  return false;
-                }
-              }
-            }
-          },
-          {
-            type: 'text',
             id: 'imgWidth',
-            label: 'Width',
+            label: 'Width:',
             maxLength: 5,
-            size: 50,
+            inputStyle: 'width:50px',
             validate: function() {
               if (this.getValue()) {
                 if(isNaN(parseFloat(this.getValue()))) {
@@ -74,7 +60,22 @@ function(editor){
                 }
               }
             }
-        }
+          },
+          {
+            type: 'text',
+            id: 'imgHeight',
+            label: 'Height:',
+            maxLength: 5,
+            inputStyle: 'width:50px',
+            validate: function() {
+              if (this.getValue()) {
+                if(isNaN(parseFloat(this.getValue()))) {
+                  alert('Height must be numeric.' );
+                  return false;
+                }
+              }
+            }
+          }
       ]
     }
   ],
