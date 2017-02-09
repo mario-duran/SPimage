@@ -43,7 +43,7 @@ function(editor){
 
                 APD_LaunchAssetPickerUseConfigCurrentUrl('spAssetPickerObj');
 
-             });
+             }
           },
           {
             type: 'text',
@@ -54,7 +54,7 @@ function(editor){
             validate: function() {
               if (this.getValue()) {
                 if(isNaN(parseFloat(this.getValue()))) {
-                  api.openMsgDialog( '', 'Height must be numeric.' );
+                  alert('Height must be numeric.' );
                   return false;
                 }
               }
@@ -69,12 +69,11 @@ function(editor){
             validate: function() {
               if (this.getValue()) {
                 if(isNaN(parseFloat(this.getValue()))) {
-                  api.openMsgDialog( '', 'Width must be numeric.' );
+                  alert('Width must be numeric.' );
                   return false;
                 }
               }
             }
-          }
         }
       ]
     }
@@ -91,11 +90,11 @@ function(editor){
     var imageObj = editor.document.createElement('img');
     imageObj.setAttribute('src', dialog.getValueOf('SPimgSettings', 'imgSrc'));
     if(dialog.getValueOf('SPimgSettings', 'imgHeight') != '') {
-      imageObj.setStyle('height', dialog.getValueOf('SPimgSettings', 'imgHeight'));
+      imageObj.setAttribute('height', dialog.getValueOf('SPimgSettings', 'imgHeight'));
     }
 
     if(dialog.getValueOf('SPimgSettings', 'imgWidth') != '') {
-      imageObj.setStyle('width', dialog.getValueOf('SPimgSettings', 'imgWidth'));
+      imageObj.setAttribute('width', dialog.getValueOf('SPimgSettings', 'imgWidth'));
     }
 
     editor.insertElement(imageObj); //insert the image
