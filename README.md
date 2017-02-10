@@ -21,5 +21,7 @@ CKEDITOR.replace( 'editor1', {
 });
 </pre>
 
-# Detailed information at
-https://blog.mario-duran.com/
+
+<hr>
+<h4>For more details visit:</h4>
+<a href="https://blog.mario-duran.com/2017/01/28/ckeditor-plugging-to-add-images-from-sharepoint-asset-picker/">Plugin documentation</a>
